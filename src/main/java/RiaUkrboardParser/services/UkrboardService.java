@@ -33,7 +33,7 @@ public class UkrboardService {
 	
 		while (postList.size()<count) {
 			
-			doc = Jsoup.connect(UKRBOARD_URL+querry+page+counter).userAgent("Mozilla").get();
+			doc = Jsoup.connect(UKRBOARD_URL+querry+page+counter).get();
 			Elements elements = doc.getElementsByAttributeValue("class", "i_l_i_c_mode3 ");
 			if (!doc.getElementsByClass("t85").hasText()) {
 				elements.forEach(elem->{

@@ -15,11 +15,11 @@ import RiaUkrboardParser.services.UkrboardService;
 public class UkrboardController {
 	
 	@Autowired
-	private UkrboardService s;
+	private UkrboardService service;
 	
-	@PostMapping("/post")
+	@PostMapping("/ukrboard")
 	public List<Post> getPostList(@RequestParam String querry, @RequestParam Integer count) throws IOException, InterruptedException {
-		return s.getPostListByQuerry(querry, count);
+		return service.getPostListByQuerry(querry, count);
 	}
 	
 }
